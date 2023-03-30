@@ -5,18 +5,18 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: "4897882604d919befd350648c7f91926a9d5de99e67b455bf0917cc2362f4bb8"
+      sha256: a36ec4843dc30ea6bf652bf25e3448db6c5e8bcf4aa55f063a5d1dad216d8214
       url: "https://pub.dev"
     source: hosted
-    version: "47.0.0"
+    version: "58.0.0"
   analyzer:
     dependency: transitive
     description:
       name: analyzer
-      sha256: "690e335554a8385bc9d787117d9eb52c0c03ee207a607e593de3c9d71b1cfe80"
+      sha256: cc4242565347e98424ce9945c819c192ec0838cb9d1f6aa4a97cc96becbc5b27
       url: "https://pub.dev"
     source: hosted
-    version: "4.7.0"
+    version: "5.10.0"
   args:
     dependency: transitive
     description:
@@ -85,12 +85,12 @@ packages:
     dependency: transitive
     description:
       name: build_resolvers
-      sha256: "687cf90a3951affac1bd5f9ecb5e3e90b60487f3d9cdc359bb310f8876bb02a6"
+      sha256: db49b8609ef8c81cca2b310618c3017c00f03a92af44c04d310b907b2d692d95
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.10"
+    version: "2.2.0"
   build_runner:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: build_runner
       sha256: b0a8a7b8a76c493e85f1b84bffa0588859a06197863dba8c9036b15581fd9727
@@ -209,6 +209,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.4"
+  equatable:
+    dependency: transitive
+    description:
+      name: equatable
+      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -471,26 +479,26 @@ packages:
     dependency: "direct main"
     description:
       name: realm
-      sha256: c6cedd2a31b46f1e0a4e90ea5d237e9b5f56562fd1aa7fc7ecde3d52f9f2685b
+      sha256: e9c63a5a982dd4357ba7f13a4dac7cdcf4eb6ec837f2f043a51ba414f4973337
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0+rc"
+    version: "1.0.3"
   realm_common:
     dependency: transitive
     description:
       name: realm_common
-      sha256: eafef694ce2997e016bfe1d25e6317d685b5d09b1b118679b8bd4c8fcf7b1545
+      sha256: e31f72feddb77e7dcfb9a8a0d19c25c79d71ecf6d873de8801b9d58cc29b5a5e
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0+rc"
+    version: "1.0.3"
   realm_generator:
     dependency: transitive
     description:
       name: realm_generator
-      sha256: "1bc514a692a43cce08c9fc4f1bec321cec130d64a59d36ca5d8f1fc940167f20"
+      sha256: "9af5252323e19ba4cd63e984b5aad20a3f809d79a6fee7779ef959456b2bb78e"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0+rc"
+    version: "1.0.3"
   result_dart:
     dependency: "direct main"
     description:
@@ -499,6 +507,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  rx_notifier:
+    dependency: "direct main"
+    description:
+      name: rx_notifier
+      sha256: "1886d7259aa2675ce69360920737880c1263f4dbdf89466f6265c302c5df9422"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0+5"
+  rx_notifier_annotation:
+    dependency: transitive
+    description:
+      name: rx_notifier_annotation
+      sha256: "362496563d617aa6fa21ab9c131f66348f3266b6580d69ecc23d2c23a52070a2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  rx_notifier_generator:
+    dependency: "direct dev"
+    description:
+      name: rx_notifier_generator
+      sha256: "1d6a0c701b3a604a9cbb54c6fb678f3b28c3a5ecef344ad62e5ae8eb9a1d1503"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   sane_uuid:
     dependency: transitive
     description:
@@ -548,10 +580,10 @@ packages:
     dependency: transitive
     description:
       name: source_gen
-      sha256: "2d79738b6bbf38a43920e2b8d189e9a3ce6cc201f4b8fc76be5e4fe377b1c38d"
+      sha256: c2bea18c95cfa0276a366270afaa2850b09b4a76db95d546f3d003dcc7011298
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.6"
+    version: "1.2.7"
   source_map_stack_trace:
     dependency: transitive
     description:
@@ -730,4 +762,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.19.0 <3.0.0"
-  flutter: ">=3.0.0"
+  flutter: ">=3.0.3"

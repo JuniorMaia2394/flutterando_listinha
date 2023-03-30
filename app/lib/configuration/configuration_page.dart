@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:listinha/src/shared/stores/app_store.dart';
+import 'package:rx_notifier/rx_notifier.dart';
 
 class ConfigurationPage extends StatefulWidget {
   const ConfigurationPage({super.key});
@@ -10,11 +11,17 @@ class ConfigurationPage extends StatefulWidget {
 }
 
 class _ConfigurationPageState extends State<ConfigurationPage> {
+  final appStore = Modular.get<AppStore>();
+
+  void _changeThemeMode(ThemeMode? mode) {
+    if (mode != null) {
+      appStore.themeMode = mode;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final appStore = context.watch<AppStore>(
-      (store) => store.themeMode,
-    );
+    context.select(() => appStore.themeMode);
     return Scaffold(
       appBar: AppBar(
         title: const Text('LISTINHA'),
@@ -45,20 +52,20 @@ class _ConfigurationPageState extends State<ConfigurationPage> {
             RadioListTile<ThemeMode>(
               value: ThemeMode.system,
               title: const Text('Sistema'),
-              groupValue: appStore.themeMode.value, //pega o value selecionado
-              onChanged: appStore.changeThemeMode,
+              groupValue: appStore.themeMode, //pega o value selecionado
+              onChanged: _changeThemeMode,
             ),
             RadioListTile<ThemeMode>(
               value: ThemeMode.light,
               title: const Text('Claro'),
-              groupValue: appStore.themeMode.value,
-              onChanged: appStore.changeThemeMode,
+              groupValue: appStore.themeMode,
+              onChanged: _changeThemeMode,
             ),
             RadioListTile<ThemeMode>(
               value: ThemeMode.dark,
               title: const Text('Escuro'),
-              groupValue: appStore.themeMode.value,
-              onChanged: appStore.changeThemeMode,
+              groupValue: appStore.themeMode,
+              onChanged: _changeThemeMode,
             ),
             const SizedBox(
               height: 20,
